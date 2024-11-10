@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author Network Visualization</title>
+  <style>
+    /* Center the SVG canvas */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f4f4f4;
+    }
+
+    svg {
+      border: 1px solid #ddd;
+    }
+
+    /* Tooltip style */
+    .tooltip {
+      position: absolute;
+      text-align: center;
+      width: 120px;
+      height: auto;
+      padding: 8px;
+      font-size: 12px;
+      background: rgba(0, 0, 0, 0.7);
+      color: #fff;
+      border-radius: 4px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <script src="https://d3js.org/d3.v6.min.js"></script>
+  <script src="visualization.js"></script>
+  <div id="controls" style="position: absolute; top: 10px; left: 10px;">
+    <label for="chargeStrength">Charge Strength:</label>
+    <input type="range" id="chargeStrength" min="-200" max="0" value="-100">
+    <br>
+    
+    <label for="collideRadius">Collision Radius:</label>
+    <input type="range" id="collideRadius" min="0" max="20" value="5">
+    <br>
+    
+    <label for="linkStrength">Link Strength:</label>
+    <input type="range" id="linkStrength" min="0" max="10" value="1">
+  </div>
+  
+  
+</body>
+</html>
